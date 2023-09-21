@@ -1,0 +1,17 @@
+[
+    {
+        "directory": "D:\\projects\\kode\\",
+        "command": "gcc -Wl,-rpath='$ORIGIN' -DISO_BUILD_DEBUG -ID:\\projects\\kode\\isolate\\src\\ -ID:\\projects\\kode\\isolate\\vendor\\GLEW\\include\\ -ID:\\projects\\kode\\isolate\\vendor\\SDL2_64bit\\include\\ -ID:\\projects\\kode\\freetype\\include\\ -o D:\\projects\\kode\\src/main.c.o -c D:\\projects\\kode\\src/main.c",
+        "file": "D:\\projects\\kode\\src/main.c"
+    },
+    {
+        "directory": "D:\\projects\\kode\\",
+        "command": "gcc -Wl,-rpath='$ORIGIN' -DISO_BUILD_DEBUG -ID:\\projects\\kode\\isolate\\src\\ -ID:\\projects\\kode\\isolate\\vendor\\GLEW\\include\\ -ID:\\projects\\kode\\isolate\\vendor\\SDL2_64bit\\include\\ -ID:\\projects\\kode\\freetype\\include\\ -o D:\\projects\\kode\\src/kode.c.o -c D:\\projects\\kode\\src/kode.c",
+        "file": "D:\\projects\\kode\\src/kode.c"
+    },
+    {
+        "directory": "D:\\projects\\kode\\",
+        "command": "gcc -Wl,-rpath='$ORIGIN' -DISO_BUILD_DEBUG -ID:\\projects\\kode\\isolate\\src\\ -ID:\\projects\\kode\\isolate\\vendor\\GLEW\\include\\ -ID:\\projects\\kode\\isolate\\vendor\\SDL2_64bit\\include\\ -ID:\\projects\\kode\\freetype\\include\\ -o D:\\projects\\kode\\src/font_renderer.c.o -c D:\\projects\\kode\\src/font_renderer.c",
+        "file": "D:\\projects\\kode\\src/font_renderer.c"
+    }
+]

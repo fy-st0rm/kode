@@ -1,0 +1,93 @@
+{
+  "build_mode": "debug",
+  "isolate_path": {
+    "windows": "isolate",
+    "linux": "isolate"
+  },
+  "cc": "gcc",
+  "out": {
+    "windows": "kode.exe",
+    "linux": "kode"
+  },
+  "c_files": [
+    "src/main.c",
+    "src/kode.c",
+    "src/font_renderer.c"
+  ],
+  "c_flags": {
+    "windows": [
+      "-Wl,-rpath='$ORIGIN'"
+    ],
+    "linux": [
+      "-Wl,-rpath='$ORIGIN'"
+    ]
+  },
+  "include_path": {
+    "windows": [
+      "isolate\\src\\",
+      "isolate\\vendor\\GLEW\\include\\",
+      "isolate\\vendor\\SDL2_64bit\\include\\",
+      "freetype\\include\\"
+    ],
+    "linux": [
+      "isolate/src/",
+      "isolate/vendor/GLEW/include/",
+      "isolate/vendor/SDL2_64bit/include/"
+    ]
+  },
+  "lib_path": {
+    "windows": [
+      "isolate\\vendor\\GLEW\\lib\\win\\",
+      "isolate\\vendor\\SDL2_64bit\\lib\\win\\",
+      "isolate\\bin\\win\\",
+      "freetype\\release_dll\\win64\\"
+    ],
+    "linux": [
+      "isolate/vendor/GLEW/lib/linux/",
+      "isolate/vendor/SDL2_64bit/lib/linux/",
+      "isolate/bin/linux/"
+    ]
+  },
+  "libs": {
+    "windows": [
+      "mingw32",
+      "SDL2main",
+      "SDL2",
+      "SDL2_image",
+      "SDL2_ttf",
+      "m",
+      "glu32",
+      "opengl32",
+      "User32",
+      "Gdi32",
+      "Shell32",
+      "glew32",
+      "freetype",
+      "isolate"
+    ],
+    "linux": [
+      "SDL2main",
+      "SDL2",
+      "SDL2_image",
+      "SDL2_ttf",
+      "m",
+      "GL",
+      "GLU",
+      "GLEW",
+      "isolate"
+    ]
+  },
+  "dll_path": {
+    "windows": [
+      "isolate\\vendor\\GLEW\\bin\\win\\",
+      "isolate\\vendor\\SDL2_64bit\\bin\\win\\",
+      "isolate\\bin\\win\\",
+      "freetype\\release_dll\\win64\\"
+    ],
+    "linux": [
+      "isolate/vendor/GLEW/bin/linux/",
+      "isolate/vendor/SDL2_64bit/bin/linux/",
+      "isolate/bin/linux/"
+    ]
+  }
+}

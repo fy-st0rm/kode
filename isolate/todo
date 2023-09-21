@@ -1,0 +1,36 @@
+# Completed
+[x] Entity Component System
+[x] Logger for both Release and Debug build
+[x] Create a proper building tool (setsup isolate projects, links properly, builds properly)
+[x] Implement Scene system instead of current functions
+[x] Add app_data variable to app struct to store client side data
+[x] Rework the engine to compile to dll/so and rework in examples and some sytnax (hashmap, graphics)
+	[x] Add iso_str
+	[x] Add vector operators for math library
+[X] Rework in opengl backend
+	[X] Abastraction
+	[X] Proper functions instead of calling iso_graphics.api
+
+# TODO
+[ ] Rework in camera system. Its bs rn.
+[ ] Isolate filesystem
+[ ] Construct layer system.
+	(Ui Layer) - *Scenes*
+						 | Main Menu
+						 | Inventory
+
+	(Game Layer) - *Scenes*
+							 | Main Menu
+							 | Level 1
+							 | Level 2
+
+[ ] Framebuffers
+[ ] Dynamic array
+[ ] Add constructor and destructor of ecs components
+
+[ ] A 2D renderer
+	[ ] Implement 2d mesh
+	[ ] Implement point lights, directional lights, ambient light
+	[ ] Implement shadows
+
+[ ] Implement SAT collision detection

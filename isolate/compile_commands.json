@@ -1,0 +1,242 @@
+[
+    {
+        "directory": "D:\\projects\\isolate\\isolate\\",
+        "command": "gcc -Wl,-rpath='$ORIGIN' -shared -DISO_BUILD_DEBUG -ID:\\projects\\isolate\\isolate\\.\\src\\ -ID:\\projects\\isolate\\isolate\\.\\vendor\\GLEW\\include\\ -ID:\\projects\\isolate\\isolate\\.\\vendor\\SDL2_64bit\\include\\ -o D:\\projects\\isolate\\isolate\\src/iso_util/iso_memory.c.o -c D:\\projects\\isolate\\isolate\\src/iso_util/iso_memory.c",
+        "file": "D:\\projects\\isolate\\isolate\\src/iso_util/iso_memory.c"
+    },
+    {
+        "directory": "D:\\projects\\isolate\\isolate\\",
+        "command": "gcc -Wl,-rpath='$ORIGIN' -shared -DISO_BUILD_DEBUG -ID:\\projects\\isolate\\isolate\\.\\src\\ -ID:\\projects\\isolate\\isolate\\.\\vendor\\GLEW\\include\\ -ID:\\projects\\isolate\\isolate\\.\\vendor\\SDL2_64bit\\include\\ -o D:\\projects\\isolate\\isolate\\src/iso_util/iso_str.c.o -c D:\\projects\\isolate\\isolate\\src/iso_util/iso_str.c",
+        "file": "D:\\projects\\isolate\\isolate\\src/iso_util/iso_str.c"
+    },
+    {
+        "directory": "D:\\projects\\isolate\\isolate\\",
+        "command": "gcc -Wl,-rpath='$ORIGIN' -shared -DISO_BUILD_DEBUG -ID:\\projects\\isolate\\isolate\\.\\src\\ -ID:\\projects\\isolate\\isolate\\.\\vendor\\GLEW\\include\\ -ID:\\projects\\isolate\\isolate\\.\\vendor\\SDL2_64bit\\include\\ -o D:\\projects\\isolate\\isolate\\src/iso_window/iso_window.c.o -c D:\\projects\\isolate\\isolate\\src/iso_window/iso_window.c",
+        "file": "D:\\projects\\isolate\\isolate\\src/iso_window/iso_window.c"
+    },
+    {
+        "directory": "D:\\projects\\isolate\\isolate\\",
+        "command": "gcc -Wl,-rpath='$ORIGIN' -shared -DISO_BUILD_DEBUG -ID:\\projects\\isolate\\isolate\\.\\src\\ -ID:\\projects\\isolate\\isolate\\.\\vendor\\GLEW\\include\\ -ID:\\projects\\isolate\\isolate\\.\\vendor\\SDL2_64bit\\include\\ -o D:\\projects\\isolate\\isolate\\src/iso_graphics/iso_opengl_backend/iso_opengl_backend.c.o -c D:\\projects\\isolate\\isolate\\src/iso_graphics/iso_opengl_backend/iso_opengl_backend.c",
+        "file": "D:\\projects\\isolate\\isolate\\src/iso_graphics/iso_opengl_backend/iso_opengl_backend.c"
+    },
+    {
+        "directory": "D:\\projects\\isolate\\isolate\\",
+        "command": "gcc -Wl,-rpath='$ORIGIN' -shared -DISO_BUILD_DEBUG -ID:\\projects\\isolate\\isolate\\.\\src\\ -ID:\\projects\\isolate\\isolate\\.\\vendor\\GLEW\\include\\ -ID:\\projects\\isolate\\isolate\\.\\vendor\\SDL2_64bit\\include\\ -o D:\\projects\\isolate\\isolate\\src/iso_graphics/iso_graphics.c.o -c D:\\projects\\isolate\\isolate\\src/iso_graphics/iso_graphics.c",
+        "file": "D:\\projects\\isolate\\isolate\\src/iso_graphics/iso_graphics.c"
+    },
+    {
+        "directory": "D:\\projects\\isolate\\isolate\\",
+        "command": "gcc -Wl,-rpath='$ORIGIN' -shared -DISO_BUILD_DEBUG -ID:\\projects\\isolate\\isolate\\.\\src\\ -ID:\\projects\\isolate\\isolate\\.\\vendor\\GLEW\\include\\ -ID:\\projects\\isolate\\isolate\\.\\vendor\\SDL2_64bit\\include\\ -o D:\\projects\\isolate\\isolate\\src/iso_scene/iso_scene.c.o -c D:\\projects\\isolate\\isolate\\src/iso_scene/iso_scene.c",
+        "file": "D:\\projects\\isolate\\isolate\\src/iso_scene/iso_scene.c"
+    },
+    {
+        "directory": "D:\\projects\\isolate\\isolate\\",
+        "command": "gcc -Wl,-rpath='$ORIGIN' -shared -DISO_BUILD_DEBUG -ID:\\projects\\isolate\\isolate\\.\\src\\ -ID:\\projects\\isolate\\isolate\\.\\vendor\\GLEW\\include\\ -ID:\\projects\\isolate\\isolate\\.\\vendor\\SDL2_64bit\\include\\ -o D:\\projects\\isolate\\isolate\\src/iso_app/iso_app.c.o -c D:\\projects\\isolate\\isolate\\src/iso_app/iso_app.c",
+        "file": "D:\\projects\\isolate\\isolate\\src/iso_app/iso_app.c"
+    },
+    {
+        "directory": "D:\\projects\\isolate\\isolate\\",
+        "command": "gcc -Wl,-rpath='$ORIGIN' -shared -DISO_BUILD_DEBUG -ID:\\projects\\isolate\\isolate\\.\\src\\ -ID:\\projects\\isolate\\isolate\\.\\vendor\\GLEW\\include\\ -ID:\\projects\\isolate\\isolate\\.\\vendor\\SDL2_64bit\\include\\ -o D:\\projects\\isolate\\isolate\\src/iso_entry/iso_entry.c.o -c D:\\projects\\isolate\\isolate\\src/iso_entry/iso_entry.c",
+        "file": "D:\\projects\\isolate\\isolate\\src/iso_entry/iso_entry.c"
+    },
+    {
+        "directory": "D:\\projects\\isolate\\isolate\\",
+        "command": "gcc -Wl,-rpath='$ORIGIN' -shared -DISO_BUILD_DEBUG -ID:\\projects\\isolate\\isolate\\.\\src\\ -ID:\\projects\\isolate\\isolate\\.\\vendor\\GLEW\\include\\ -ID:\\projects\\isolate\\isolate\\.\\vendor\\SDL2_64bit\\include\\ -o D:\\projects\\isolate\\isolate\\src/iso_camera/iso_camera.c.o -c D:\\projects\\isolate\\isolate\\src/iso_camera/iso_camera.c",
+        "file": "D:\\projects\\isolate\\isolate\\src/iso_camera/iso_camera.c"
+    },
+    {
+        "directory": "D:\\projects\\isolate\\isolate\\",
+        "command": "gcc -Wl,-rpath='$ORIGIN' -shared -DISO_BUILD_DEBUG -ID:\\projects\\isolate\\isolate\\.\\src\\ -ID:\\projects\\isolate\\isolate\\.\\vendor\\GLEW\\include\\ -ID:\\projects\\isolate\\isolate\\.\\vendor\\SDL2_64bit\\include\\ -o D:\\projects\\isolate\\isolate\\src/iso_math/iso_vec/iso_vec.c.o -c D:\\projects\\isolate\\isolate\\src/iso_math/iso_vec/iso_vec.c",
+        "file": "D:\\projects\\isolate\\isolate\\src/iso_math/iso_vec/iso_vec.c"
+    },
+    {
+        "directory": "D:\\projects\\isolate\\isolate\\",
+        "command": "gcc -Wl,-rpath='$ORIGIN' -shared -DISO_BUILD_DEBUG -ID:\\projects\\isolate\\isolate\\.\\src\\ -ID:\\projects\\isolate\\isolate\\.\\vendor\\GLEW\\include\\ -ID:\\projects\\isolate\\isolate\\.\\vendor\\SDL2_64bit\\include\\ -o D:\\projects\\isolate\\isolate\\src/iso_math/iso_mat/iso_mat.c.o -c D:\\projects\\isolate\\isolate\\src/iso_math/iso_mat/iso_mat.c",
+        "file": "D:\\projects\\isolate\\isolate\\src/iso_math/iso_mat/iso_mat.c"
+    },
+    {
+        "directory": "D:\\projects\\isolate\\isolate\\",
+        "command": "gcc -Wl,-rpath='$ORIGIN' -shared -DISO_BUILD_DEBUG -ID:\\projects\\isolate\\isolate\\.\\src\\ -ID:\\projects\\isolate\\isolate\\.\\vendor\\GLEW\\include\\ -ID:\\projects\\isolate\\isolate\\.\\vendor\\SDL2_64bit\\include\\ -o D:\\projects\\isolate\\isolate\\src/iso_util/iso_filesystem.c.o -c D:\\projects\\isolate\\isolate\\src/iso_util/iso_filesystem.c",
+        "file": "D:\\projects\\isolate\\isolate\\src/iso_util/iso_filesystem.c"
+    },
+    {
+        "directory": "D:\\projects\\isolate\\isolate\\",
+        "command": "gcc -Wl,-rpath='$ORIGIN' -shared -DISO_BUILD_DEBUG -ID:\\projects\\isolate\\isolate\\.\\src\\ -ID:\\projects\\isolate\\isolate\\.\\vendor\\GLEW\\include\\ -ID:\\projects\\isolate\\isolate\\.\\vendor\\SDL2_64bit\\include\\ -o D:\\projects\\isolate\\isolate\\src/iso_graphics/iso_opengl_backend/iso_gl_util.c.o -c D:\\projects\\isolate\\isolate\\src/iso_graphics/iso_opengl_backend/iso_gl_util.c",
+        "file": "D:\\projects\\isolate\\isolate\\src/iso_graphics/iso_opengl_backend/iso_gl_util.c"
+    },
+    {
+        "directory": "D:\\projects\\isolate\\isolate\\",
+        "command": "gcc -Wl,-rpath='$ORIGIN' -shared -DISO_BUILD_DEBUG -ID:\\projects\\isolate\\isolate\\.\\src\\ -ID:\\projects\\isolate\\isolate\\.\\vendor\\GLEW\\include\\ -ID:\\projects\\isolate\\isolate\\.\\vendor\\SDL2_64bit\\include\\ -o D:\\projects\\isolate\\isolate\\src/iso_graphics/iso_opengl_backend/iso_gl_vertex_buffer.c.o -c D:\\projects\\isolate\\isolate\\src/iso_graphics/iso_opengl_backend/iso_gl_vertex_buffer.c",
+        "file": "D:\\projects\\isolate\\isolate\\src/iso_graphics/iso_opengl_backend/iso_gl_vertex_buffer.c"
+    },
+    {
+        "directory": "D:\\projects\\isolate\\isolate\\",
+        "command": "gcc -Wl,-rpath='$ORIGIN' -shared -DISO_BUILD_DEBUG -ID:\\projects\\isolate\\isolate\\.\\src\\ -ID:\\projects\\isolate\\isolate\\.\\vendor\\GLEW\\include\\ -ID:\\projects\\isolate\\isolate\\.\\vendor\\SDL2_64bit\\include\\ -o D:\\projects\\isolate\\isolate\\src/iso_graphics/iso_opengl_backend/iso_gl_index_buffer.c.o -c D:\\projects\\isolate\\isolate\\src/iso_graphics/iso_opengl_backend/iso_gl_index_buffer.c",
+        "file": "D:\\projects\\isolate\\isolate\\src/iso_graphics/iso_opengl_backend/iso_gl_index_buffer.c"
+    },
+    {
+        "directory": "D:\\projects\\isolate\\isolate\\",
+        "command": "gcc -Wl,-rpath='$ORIGIN' -shared -DISO_BUILD_DEBUG -ID:\\projects\\isolate\\isolate\\.\\src\\ -ID:\\projects\\isolate\\isolate\\.\\vendor\\GLEW\\include\\ -ID:\\projects\\isolate\\isolate\\.\\vendor\\SDL2_64bit\\include\\ -o D:\\projects\\isolate\\isolate\\src/iso_graphics/iso_opengl_backend/iso_gl_shader.c.o -c D:\\projects\\isolate\\isolate\\src/iso_graphics/iso_opengl_backend/iso_gl_shader.c",
+        "file": "D:\\projects\\isolate\\isolate\\src/iso_graphics/iso_opengl_backend/iso_gl_shader.c"
+    },
+    {
+        "directory": "D:\\projects\\isolate\\isolate\\",
+        "command": "gcc -Wl,-rpath='$ORIGIN' -shared -DISO_BUILD_DEBUG -ID:\\projects\\isolate\\isolate\\.\\src\\ -ID:\\projects\\isolate\\isolate\\.\\vendor\\GLEW\\include\\ -ID:\\projects\\isolate\\isolate\\.\\vendor\\SDL2_64bit\\include\\ -o D:\\projects\\isolate\\isolate\\src/iso_graphics/iso_opengl_backend/iso_gl_texture.c.o -c D:\\projects\\isolate\\isolate\\src/iso_graphics/iso_opengl_backend/iso_gl_texture.c",
+        "file": "D:\\projects\\isolate\\isolate\\src/iso_graphics/iso_opengl_backend/iso_gl_texture.c"
+    },
+    {
+        "directory": "D:\\projects\\isolate\\isolate\\",
+        "command": "gcc -Wl,-rpath='$ORIGIN' -shared -DISO_BUILD_DEBUG -ID:\\projects\\isolate\\isolate\\.\\src\\ -ID:\\projects\\isolate\\isolate\\.\\vendor\\GLEW\\include\\ -ID:\\projects\\isolate\\isolate\\.\\vendor\\SDL2_64bit\\include\\ -o D:\\projects\\isolate\\isolate\\src/iso_graphics/iso_opengl_backend/iso_gl_render_pipeline.c.o -c D:\\projects\\isolate\\isolate\\src/iso_graphics/iso_opengl_backend/iso_gl_render_pipeline.c",
+        "file": "D:\\projects\\isolate\\isolate\\src/iso_graphics/iso_opengl_backend/iso_gl_render_pipeline.c"
+    },
+    {
+        "directory": "D:\\projects\\isolate\\isolate\\",
+        "command": "gcc -Wl,-rpath='$ORIGIN' -shared -DISO_BUILD_DEBUG -ID:\\projects\\isolate\\isolate\\.\\src\\ -ID:\\projects\\isolate\\isolate\\.\\vendor\\GLEW\\include\\ -ID:\\projects\\isolate\\isolate\\.\\vendor\\SDL2_64bit\\include\\ -o D:\\projects\\isolate\\isolate\\src/iso_graphics/iso_graphics_core/iso_graphics_util.c.o -c D:\\projects\\isolate\\isolate\\src/iso_graphics/iso_graphics_core/iso_graphics_util.c",
+        "file": "D:\\projects\\isolate\\isolate\\src/iso_graphics/iso_graphics_core/iso_graphics_util.c"
+    },
+    {
+        "directory": "D:\\projects\\isolate\\isolate\\",
+        "command": "gcc -Wl,-rpath='$ORIGIN' -shared -DISO_BUILD_DEBUG -ID:\\projects\\isolate\\isolate\\.\\src\\ -ID:\\projects\\isolate\\isolate\\.\\vendor\\GLEW\\include\\ -ID:\\projects\\isolate\\isolate\\.\\vendor\\SDL2_64bit\\include\\ -o D:\\projects\\isolate\\isolate\\src/iso_graphics/iso_graphics_core/iso_vertex_buffer.c.o -c D:\\projects\\isolate\\isolate\\src/iso_graphics/iso_graphics_core/iso_vertex_buffer.c",
+        "file": "D:\\projects\\isolate\\isolate\\src/iso_graphics/iso_graphics_core/iso_vertex_buffer.c"
+    },
+    {
+        "directory": "D:\\projects\\isolate\\isolate\\",
+        "command": "gcc -Wl,-rpath='$ORIGIN' -shared -DISO_BUILD_DEBUG -ID:\\projects\\isolate\\isolate\\.\\src\\ -ID:\\projects\\isolate\\isolate\\.\\vendor\\GLEW\\include\\ -ID:\\projects\\isolate\\isolate\\.\\vendor\\SDL2_64bit\\include\\ -o D:\\projects\\isolate\\isolate\\src/iso_graphics/iso_graphics_core/iso_index_buffer.c.o -c D:\\projects\\isolate\\isolate\\src/iso_graphics/iso_graphics_core/iso_index_buffer.c",
+        "file": "D:\\projects\\isolate\\isolate\\src/iso_graphics/iso_graphics_core/iso_index_buffer.c"
+    },
+    {
+        "directory": "D:\\projects\\isolate\\isolate\\",
+        "command": "gcc -Wl,-rpath='$ORIGIN' -shared -DISO_BUILD_DEBUG -ID:\\projects\\isolate\\isolate\\.\\src\\ -ID:\\projects\\isolate\\isolate\\.\\vendor\\GLEW\\include\\ -ID:\\projects\\isolate\\isolate\\.\\vendor\\SDL2_64bit\\include\\ -o D:\\projects\\isolate\\isolate\\src/iso_graphics/iso_graphics_core/iso_shader.c.o -c D:\\projects\\isolate\\isolate\\src/iso_graphics/iso_graphics_core/iso_shader.c",
+        "file": "D:\\projects\\isolate\\isolate\\src/iso_graphics/iso_graphics_core/iso_shader.c"
+    },
+    {
+        "directory": "D:\\projects\\isolate\\isolate\\",
+        "command": "gcc -Wl,-rpath='$ORIGIN' -shared -DISO_BUILD_DEBUG -ID:\\projects\\isolate\\isolate\\.\\src\\ -ID:\\projects\\isolate\\isolate\\.\\vendor\\GLEW\\include\\ -ID:\\projects\\isolate\\isolate\\.\\vendor\\SDL2_64bit\\include\\ -o D:\\projects\\isolate\\isolate\\src/iso_graphics/iso_graphics_core/iso_texture.c.o -c D:\\projects\\isolate\\isolate\\src/iso_graphics/iso_graphics_core/iso_texture.c",
+        "file": "D:\\projects\\isolate\\isolate\\src/iso_graphics/iso_graphics_core/iso_texture.c"
+    },
+    {
+        "directory": "D:\\projects\\isolate\\isolate\\",
+        "command": "gcc -Wl,-rpath='$ORIGIN' -shared -DISO_BUILD_DEBUG -ID:\\projects\\isolate\\isolate\\.\\src\\ -ID:\\projects\\isolate\\isolate\\.\\vendor\\GLEW\\include\\ -ID:\\projects\\isolate\\isolate\\.\\vendor\\SDL2_64bit\\include\\ -o D:\\projects\\isolate\\isolate\\src/iso_graphics/iso_graphics_core/iso_render_pipeline.c.o -c D:\\projects\\isolate\\isolate\\src/iso_graphics/iso_graphics_core/iso_render_pipeline.c",
+        "file": "D:\\projects\\isolate\\isolate\\src/iso_graphics/iso_graphics_core/iso_render_pipeline.c"
+    },
+    {
+        "directory": "D:\\projects\\kode\\isolate\\",
+        "command": "gcc -Wl,-rpath='$ORIGIN' -shared -DISO_BUILD_DEBUG -ID:\\projects\\kode\\isolate\\.\\src\\ -ID:\\projects\\kode\\isolate\\.\\vendor\\GLEW\\include\\ -ID:\\projects\\kode\\isolate\\.\\vendor\\SDL2_64bit\\include\\ -o D:\\projects\\kode\\isolate\\src/iso_util/iso_memory.c.o -c D:\\projects\\kode\\isolate\\src/iso_util/iso_memory.c",
+        "file": "D:\\projects\\kode\\isolate\\src/iso_util/iso_memory.c"
+    },
+    {
+        "directory": "D:\\projects\\kode\\isolate\\",
+        "command": "gcc -Wl,-rpath='$ORIGIN' -shared -DISO_BUILD_DEBUG -ID:\\projects\\kode\\isolate\\.\\src\\ -ID:\\projects\\kode\\isolate\\.\\vendor\\GLEW\\include\\ -ID:\\projects\\kode\\isolate\\.\\vendor\\SDL2_64bit\\include\\ -o D:\\projects\\kode\\isolate\\src/iso_util/iso_str.c.o -c D:\\projects\\kode\\isolate\\src/iso_util/iso_str.c",
+        "file": "D:\\projects\\kode\\isolate\\src/iso_util/iso_str.c"
+    },
+    {
+        "directory": "D:\\projects\\kode\\isolate\\",
+        "command": "gcc -Wl,-rpath='$ORIGIN' -shared -DISO_BUILD_DEBUG -ID:\\projects\\kode\\isolate\\.\\src\\ -ID:\\projects\\kode\\isolate\\.\\vendor\\GLEW\\include\\ -ID:\\projects\\kode\\isolate\\.\\vendor\\SDL2_64bit\\include\\ -o D:\\projects\\kode\\isolate\\src/iso_util/iso_filesystem.c.o -c D:\\projects\\kode\\isolate\\src/iso_util/iso_filesystem.c",
+        "file": "D:\\projects\\kode\\isolate\\src/iso_util/iso_filesystem.c"
+    },
+    {
+        "directory": "D:\\projects\\kode\\isolate\\",
+        "command": "gcc -Wl,-rpath='$ORIGIN' -shared -DISO_BUILD_DEBUG -ID:\\projects\\kode\\isolate\\.\\src\\ -ID:\\projects\\kode\\isolate\\.\\vendor\\GLEW\\include\\ -ID:\\projects\\kode\\isolate\\.\\vendor\\SDL2_64bit\\include\\ -o D:\\projects\\kode\\isolate\\src/iso_math/iso_vec/iso_vec.c.o -c D:\\projects\\kode\\isolate\\src/iso_math/iso_vec/iso_vec.c",
+        "file": "D:\\projects\\kode\\isolate\\src/iso_math/iso_vec/iso_vec.c"
+    },
+    {
+        "directory": "D:\\projects\\kode\\isolate\\",
+        "command": "gcc -Wl,-rpath='$ORIGIN' -shared -DISO_BUILD_DEBUG -ID:\\projects\\kode\\isolate\\.\\src\\ -ID:\\projects\\kode\\isolate\\.\\vendor\\GLEW\\include\\ -ID:\\projects\\kode\\isolate\\.\\vendor\\SDL2_64bit\\include\\ -o D:\\projects\\kode\\isolate\\src/iso_math/iso_mat/iso_mat.c.o -c D:\\projects\\kode\\isolate\\src/iso_math/iso_mat/iso_mat.c",
+        "file": "D:\\projects\\kode\\isolate\\src/iso_math/iso_mat/iso_mat.c"
+    },
+    {
+        "directory": "D:\\projects\\kode\\isolate\\",
+        "command": "gcc -Wl,-rpath='$ORIGIN' -shared -DISO_BUILD_DEBUG -ID:\\projects\\kode\\isolate\\.\\src\\ -ID:\\projects\\kode\\isolate\\.\\vendor\\GLEW\\include\\ -ID:\\projects\\kode\\isolate\\.\\vendor\\SDL2_64bit\\include\\ -o D:\\projects\\kode\\isolate\\src/iso_window/iso_window.c.o -c D:\\projects\\kode\\isolate\\src/iso_window/iso_window.c",
+        "file": "D:\\projects\\kode\\isolate\\src/iso_window/iso_window.c"
+    },
+    {
+        "directory": "D:\\projects\\kode\\isolate\\",
+        "command": "gcc -Wl,-rpath='$ORIGIN' -shared -DISO_BUILD_DEBUG -ID:\\projects\\kode\\isolate\\.\\src\\ -ID:\\projects\\kode\\isolate\\.\\vendor\\GLEW\\include\\ -ID:\\projects\\kode\\isolate\\.\\vendor\\SDL2_64bit\\include\\ -o D:\\projects\\kode\\isolate\\src/iso_graphics/iso_opengl_backend/iso_opengl_backend.c.o -c D:\\projects\\kode\\isolate\\src/iso_graphics/iso_opengl_backend/iso_opengl_backend.c",
+        "file": "D:\\projects\\kode\\isolate\\src/iso_graphics/iso_opengl_backend/iso_opengl_backend.c"
+    },
+    {
+        "directory": "D:\\projects\\kode\\isolate\\",
+        "command": "gcc -Wl,-rpath='$ORIGIN' -shared -DISO_BUILD_DEBUG -ID:\\projects\\kode\\isolate\\.\\src\\ -ID:\\projects\\kode\\isolate\\.\\vendor\\GLEW\\include\\ -ID:\\projects\\kode\\isolate\\.\\vendor\\SDL2_64bit\\include\\ -o D:\\projects\\kode\\isolate\\src/iso_graphics/iso_opengl_backend/iso_gl_util.c.o -c D:\\projects\\kode\\isolate\\src/iso_graphics/iso_opengl_backend/iso_gl_util.c",
+        "file": "D:\\projects\\kode\\isolate\\src/iso_graphics/iso_opengl_backend/iso_gl_util.c"
+    },
+    {
+        "directory": "D:\\projects\\kode\\isolate\\",
+        "command": "gcc -Wl,-rpath='$ORIGIN' -shared -DISO_BUILD_DEBUG -ID:\\projects\\kode\\isolate\\.\\src\\ -ID:\\projects\\kode\\isolate\\.\\vendor\\GLEW\\include\\ -ID:\\projects\\kode\\isolate\\.\\vendor\\SDL2_64bit\\include\\ -o D:\\projects\\kode\\isolate\\src/iso_graphics/iso_opengl_backend/iso_gl_vertex_buffer.c.o -c D:\\projects\\kode\\isolate\\src/iso_graphics/iso_opengl_backend/iso_gl_vertex_buffer.c",
+        "file": "D:\\projects\\kode\\isolate\\src/iso_graphics/iso_opengl_backend/iso_gl_vertex_buffer.c"
+    },
+    {
+        "directory": "D:\\projects\\kode\\isolate\\",
+        "command": "gcc -Wl,-rpath='$ORIGIN' -shared -DISO_BUILD_DEBUG -ID:\\projects\\kode\\isolate\\.\\src\\ -ID:\\projects\\kode\\isolate\\.\\vendor\\GLEW\\include\\ -ID:\\projects\\kode\\isolate\\.\\vendor\\SDL2_64bit\\include\\ -o D:\\projects\\kode\\isolate\\src/iso_graphics/iso_opengl_backend/iso_gl_index_buffer.c.o -c D:\\projects\\kode\\isolate\\src/iso_graphics/iso_opengl_backend/iso_gl_index_buffer.c",
+        "file": "D:\\projects\\kode\\isolate\\src/iso_graphics/iso_opengl_backend/iso_gl_index_buffer.c"
+    },
+    {
+        "directory": "D:\\projects\\kode\\isolate\\",
+        "command": "gcc -Wl,-rpath='$ORIGIN' -shared -DISO_BUILD_DEBUG -ID:\\projects\\kode\\isolate\\.\\src\\ -ID:\\projects\\kode\\isolate\\.\\vendor\\GLEW\\include\\ -ID:\\projects\\kode\\isolate\\.\\vendor\\SDL2_64bit\\include\\ -o D:\\projects\\kode\\isolate\\src/iso_graphics/iso_opengl_backend/iso_gl_shader.c.o -c D:\\projects\\kode\\isolate\\src/iso_graphics/iso_opengl_backend/iso_gl_shader.c",
+        "file": "D:\\projects\\kode\\isolate\\src/iso_graphics/iso_opengl_backend/iso_gl_shader.c"
+    },
+    {
+        "directory": "D:\\projects\\kode\\isolate\\",
+        "command": "gcc -Wl,-rpath='$ORIGIN' -shared -DISO_BUILD_DEBUG -ID:\\projects\\kode\\isolate\\.\\src\\ -ID:\\projects\\kode\\isolate\\.\\vendor\\GLEW\\include\\ -ID:\\projects\\kode\\isolate\\.\\vendor\\SDL2_64bit\\include\\ -o D:\\projects\\kode\\isolate\\src/iso_graphics/iso_opengl_backend/iso_gl_texture.c.o -c D:\\projects\\kode\\isolate\\src/iso_graphics/iso_opengl_backend/iso_gl_texture.c",
+        "file": "D:\\projects\\kode\\isolate\\src/iso_graphics/iso_opengl_backend/iso_gl_texture.c"
+    },
+    {
+        "directory": "D:\\projects\\kode\\isolate\\",
+        "command": "gcc -Wl,-rpath='$ORIGIN' -shared -DISO_BUILD_DEBUG -ID:\\projects\\kode\\isolate\\.\\src\\ -ID:\\projects\\kode\\isolate\\.\\vendor\\GLEW\\include\\ -ID:\\projects\\kode\\isolate\\.\\vendor\\SDL2_64bit\\include\\ -o D:\\projects\\kode\\isolate\\src/iso_graphics/iso_opengl_backend/iso_gl_render_pipeline.c.o -c D:\\projects\\kode\\isolate\\src/iso_graphics/iso_opengl_backend/iso_gl_render_pipeline.c",
+        "file": "D:\\projects\\kode\\isolate\\src/iso_graphics/iso_opengl_backend/iso_gl_render_pipeline.c"
+    },
+    {
+        "directory": "D:\\projects\\kode\\isolate\\",
+        "command": "gcc -Wl,-rpath='$ORIGIN' -shared -DISO_BUILD_DEBUG -ID:\\projects\\kode\\isolate\\.\\src\\ -ID:\\projects\\kode\\isolate\\.\\vendor\\GLEW\\include\\ -ID:\\projects\\kode\\isolate\\.\\vendor\\SDL2_64bit\\include\\ -o D:\\projects\\kode\\isolate\\src/iso_graphics/iso_graphics.c.o -c D:\\projects\\kode\\isolate\\src/iso_graphics/iso_graphics.c",
+        "file": "D:\\projects\\kode\\isolate\\src/iso_graphics/iso_graphics.c"
+    },
+    {
+        "directory": "D:\\projects\\kode\\isolate\\",
+        "command": "gcc -Wl,-rpath='$ORIGIN' -shared -DISO_BUILD_DEBUG -ID:\\projects\\kode\\isolate\\.\\src\\ -ID:\\projects\\kode\\isolate\\.\\vendor\\GLEW\\include\\ -ID:\\projects\\kode\\isolate\\.\\vendor\\SDL2_64bit\\include\\ -o D:\\projects\\kode\\isolate\\src/iso_graphics/iso_graphics_core/iso_graphics_util.c.o -c D:\\projects\\kode\\isolate\\src/iso_graphics/iso_graphics_core/iso_graphics_util.c",
+        "file": "D:\\projects\\kode\\isolate\\src/iso_graphics/iso_graphics_core/iso_graphics_util.c"
+    },
+    {
+        "directory": "D:\\projects\\kode\\isolate\\",
+        "command": "gcc -Wl,-rpath='$ORIGIN' -shared -DISO_BUILD_DEBUG -ID:\\projects\\kode\\isolate\\.\\src\\ -ID:\\projects\\kode\\isolate\\.\\vendor\\GLEW\\include\\ -ID:\\projects\\kode\\isolate\\.\\vendor\\SDL2_64bit\\include\\ -o D:\\projects\\kode\\isolate\\src/iso_graphics/iso_graphics_core/iso_vertex_buffer.c.o -c D:\\projects\\kode\\isolate\\src/iso_graphics/iso_graphics_core/iso_vertex_buffer.c",
+        "file": "D:\\projects\\kode\\isolate\\src/iso_graphics/iso_graphics_core/iso_vertex_buffer.c"
+    },
+    {
+        "directory": "D:\\projects\\kode\\isolate\\",
+        "command": "gcc -Wl,-rpath='$ORIGIN' -shared -DISO_BUILD_DEBUG -ID:\\projects\\kode\\isolate\\.\\src\\ -ID:\\projects\\kode\\isolate\\.\\vendor\\GLEW\\include\\ -ID:\\projects\\kode\\isolate\\.\\vendor\\SDL2_64bit\\include\\ -o D:\\projects\\kode\\isolate\\src/iso_graphics/iso_graphics_core/iso_index_buffer.c.o -c D:\\projects\\kode\\isolate\\src/iso_graphics/iso_graphics_core/iso_index_buffer.c",
+        "file": "D:\\projects\\kode\\isolate\\src/iso_graphics/iso_graphics_core/iso_index_buffer.c"
+    },
+    {
+        "directory": "D:\\projects\\kode\\isolate\\",
+        "command": "gcc -Wl,-rpath='$ORIGIN' -shared -DISO_BUILD_DEBUG -ID:\\projects\\kode\\isolate\\.\\src\\ -ID:\\projects\\kode\\isolate\\.\\vendor\\GLEW\\include\\ -ID:\\projects\\kode\\isolate\\.\\vendor\\SDL2_64bit\\include\\ -o D:\\projects\\kode\\isolate\\src/iso_graphics/iso_graphics_core/iso_shader.c.o -c D:\\projects\\kode\\isolate\\src/iso_graphics/iso_graphics_core/iso_shader.c",
+        "file": "D:\\projects\\kode\\isolate\\src/iso_graphics/iso_graphics_core/iso_shader.c"
+    },
+    {
+        "directory": "D:\\projects\\kode\\isolate\\",
+        "command": "gcc -Wl,-rpath='$ORIGIN' -shared -DISO_BUILD_DEBUG -ID:\\projects\\kode\\isolate\\.\\src\\ -ID:\\projects\\kode\\isolate\\.\\vendor\\GLEW\\include\\ -ID:\\projects\\kode\\isolate\\.\\vendor\\SDL2_64bit\\include\\ -o D:\\projects\\kode\\isolate\\src/iso_graphics/iso_graphics_core/iso_texture.c.o -c D:\\projects\\kode\\isolate\\src/iso_graphics/iso_graphics_core/iso_texture.c",
+        "file": "D:\\projects\\kode\\isolate\\src/iso_graphics/iso_graphics_core/iso_texture.c"
+    },
+    {
+        "directory": "D:\\projects\\kode\\isolate\\",
+        "command": "gcc -Wl,-rpath='$ORIGIN' -shared -DISO_BUILD_DEBUG -ID:\\projects\\kode\\isolate\\.\\src\\ -ID:\\projects\\kode\\isolate\\.\\vendor\\GLEW\\include\\ -ID:\\projects\\kode\\isolate\\.\\vendor\\SDL2_64bit\\include\\ -o D:\\projects\\kode\\isolate\\src/iso_graphics/iso_graphics_core/iso_render_pipeline.c.o -c D:\\projects\\kode\\isolate\\src/iso_graphics/iso_graphics_core/iso_render_pipeline.c",
+        "file": "D:\\projects\\kode\\isolate\\src/iso_graphics/iso_graphics_core/iso_render_pipeline.c"
+    },
+    {
+        "directory": "D:\\projects\\kode\\isolate\\",
+        "command": "gcc -Wl,-rpath='$ORIGIN' -shared -DISO_BUILD_DEBUG -ID:\\projects\\kode\\isolate\\.\\src\\ -ID:\\projects\\kode\\isolate\\.\\vendor\\GLEW\\include\\ -ID:\\projects\\kode\\isolate\\.\\vendor\\SDL2_64bit\\include\\ -o D:\\projects\\kode\\isolate\\src/iso_camera/iso_camera.c.o -c D:\\projects\\kode\\isolate\\src/iso_camera/iso_camera.c",
+        "file": "D:\\projects\\kode\\isolate\\src/iso_camera/iso_camera.c"
+    },
+    {
+        "directory": "D:\\projects\\kode\\isolate\\",
+        "command": "gcc -Wl,-rpath='$ORIGIN' -shared -DISO_BUILD_DEBUG -ID:\\projects\\kode\\isolate\\.\\src\\ -ID:\\projects\\kode\\isolate\\.\\vendor\\GLEW\\include\\ -ID:\\projects\\kode\\isolate\\.\\vendor\\SDL2_64bit\\include\\ -o D:\\projects\\kode\\isolate\\src/iso_scene/iso_scene.c.o -c D:\\projects\\kode\\isolate\\src/iso_scene/iso_scene.c",
+        "file": "D:\\projects\\kode\\isolate\\src/iso_scene/iso_scene.c"
+    },
+    {
+        "directory": "D:\\projects\\kode\\isolate\\",
+        "command": "gcc -Wl,-rpath='$ORIGIN' -shared -DISO_BUILD_DEBUG -ID:\\projects\\kode\\isolate\\.\\src\\ -ID:\\projects\\kode\\isolate\\.\\vendor\\GLEW\\include\\ -ID:\\projects\\kode\\isolate\\.\\vendor\\SDL2_64bit\\include\\ -o D:\\projects\\kode\\isolate\\src/iso_app/iso_app.c.o -c D:\\projects\\kode\\isolate\\src/iso_app/iso_app.c",
+        "file": "D:\\projects\\kode\\isolate\\src/iso_app/iso_app.c"
+    },
+    {
+        "directory": "D:\\projects\\kode\\isolate\\",
+        "command": "gcc -Wl,-rpath='$ORIGIN' -shared -DISO_BUILD_DEBUG -ID:\\projects\\kode\\isolate\\.\\src\\ -ID:\\projects\\kode\\isolate\\.\\vendor\\GLEW\\include\\ -ID:\\projects\\kode\\isolate\\.\\vendor\\SDL2_64bit\\include\\ -o D:\\projects\\kode\\isolate\\src/iso_entry/iso_entry.c.o -c D:\\projects\\kode\\isolate\\src/iso_entry/iso_entry.c",
+        "file": "D:\\projects\\kode\\isolate\\src/iso_entry/iso_entry.c"
+    }
+]
