@@ -12,7 +12,8 @@
   "c_files": [
     "src/main.c",
     "src/kode.c",
-    "src/font_renderer.c"
+    "src/font_renderer.c",
+    "src/kode_font.c"
   ],
   "c_flags": {
     "windows": [
@@ -26,8 +27,7 @@
     "windows": [
       "isolate\\src\\",
       "isolate\\vendor\\GLEW\\include\\",
-      "isolate\\vendor\\SDL2_64bit\\include\\",
-      "freetype\\include\\"
+      "isolate\\vendor\\SDL2_64bit\\include\\"
     ],
     "linux": [
       "isolate/src/",
@@ -39,8 +39,7 @@
     "windows": [
       "isolate\\vendor\\GLEW\\lib\\win\\",
       "isolate\\vendor\\SDL2_64bit\\lib\\win\\",
-      "isolate\\bin\\win\\",
-      "freetype\\release_dll\\win64\\"
+      "isolate\\bin\\win\\"
     ],
     "linux": [
       "isolate/vendor/GLEW/lib/linux/",
@@ -62,7 +61,6 @@
       "Gdi32",
       "Shell32",
       "glew32",
-      "freetype",
       "isolate"
     ],
     "linux": [
@@ -81,8 +79,7 @@
     "windows": [
       "isolate\\vendor\\GLEW\\bin\\win\\",
       "isolate\\vendor\\SDL2_64bit\\bin\\win\\",
-      "isolate\\bin\\win\\",
-      "freetype\\release_dll\\win64\\"
+      "isolate\\bin\\win\\"
     ],
     "linux": [
       "isolate/vendor/GLEW/bin/linux/",

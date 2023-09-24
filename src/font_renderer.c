@@ -1,5 +1,4 @@
 #include "font_renderer.h"
-#include "iso_graphics/iso_opengl_backend/iso_gl_texture.h"
 
 void init_isolate_buffers(font_renderer* ren) {
 	iso_sdl_check(TTF_Init());
@@ -64,7 +63,7 @@ void init_isolate_buffers(font_renderer* ren) {
 		.pos  = (iso_vec3) { 0, 0, 0 },
 		.rot  = (iso_rotation) {
 			.angle = 0.0f,
-			.axes = (iso_vec3) { 0, 0, 1 }
+			.axes = (iso_vec3) { 0, 0, 0 }
 		},
 		.viewport = (iso_camera_ortho_viewport_def) {
 			.left = 0.0f,
@@ -76,91 +75,6 @@ void init_isolate_buffers(font_renderer* ren) {
 		}
 	};
 	ren->cam = iso_ortho_camera_new(ren->app->camera_manager, cam_def);
-}
-
-void generate_glyphs(font_renderer* ren) {
-	for (char c = ASCII_LOWER; c < ASCII_HIGHER; c++) {
-		char text[2] = " \0";
-		text[0] = c;
-
-		SDL_Color color = { 255, 255, 255, 255 };
-		SDL_Surface* surface = iso_sdl_check_ptr(TTF_RenderText_Blended(
-			ren->font->sdl_font, text, color));
-		iso_gl_flip_surface(surface);
-		iso_gl_pack_surface(surface);
-
-		iso_texture_from_data_def td = {
-			.name   = text,
-			.pixels = surface->pixels,
-			.fmt    = ISO_RGBA,
-			.width  = surface->w,
-			.height = surface->h,
-			.filter = {
-				.min  = ISO_TEXTURE_FILTER_LINEAR,
-				.mag  = ISO_TEXTURE_FILTER_NEAREST
-			}
-		};
-		iso_texture* texture = iso_texture_new_from_data(td);
-
-		kode_glyph glyph = {
-			.texture = texture,
-			.size = (iso_vec2) {
-				.x = surface->w,
-				.y = surface->h,
-			},
-		};
-		iso_hmap_add(ren->font->glyphs, glyph.texture->name, glyph);
-
-		SDL_FreeSurface(surface);
-	}
-
-	/*
-	iso_shader_bind(ren->shader);
-	u32 samplers[32];
-	for (u32 i = 0; i < 32; i++) samplers[i] = i;
-
-	iso_uniform_def tex_uni_def = {
-		.name = "char_texture",
-		.type = ISO_UNIFORM_SAMPLER2D,
-		.data = &(iso_uniform_sampler_def) {
-			.count = 32,
-			.samplers = samplers
-		}
-	};
-	iso_shader_uniform_set(ren->shader, tex_uni_def); 
-	*/
-}
-
-void delete_glyphs(font_renderer* ren) {
-	for (char c = ASCII_LOWER; c < ASCII_HIGHER; c++) {
-		kode_glyph glyph;
-
-		char name[2] = " \0";
-		name[0] = c;
-
-		iso_hmap_get(ren->font->glyphs, name, glyph);
-		iso_texture_delete(glyph.texture);
-	}
-}
-
-void init_font(font_renderer* ren, kode_font_def font_def) {
-	ren->font = iso_alloc(sizeof(kode_font));
-
-	ren->font->font_path = iso_str_new(font_def.font_path);
-	ren->font->font_size = font_def.font_size;
-
-	ren->font->sdl_font = iso_sdl_check_ptr(TTF_OpenFont(
-		ren->font->font_path,
-		ren->font->font_size)
-	);
-
-	iso_log_sucess("Sucessfully loaded font: `%s: %d`\n",
-		ren->font->font_path, ren->font->font_size);
-
-	generate_glyphs(ren);
-
-	//TODO: Create texture atlas
-	//TODO: Setting up the samplers
 }
 
 font_renderer* font_renderer_new(iso_app* app, u32 max_quad_cnt, kode_font_def font_def) {
@@ -175,8 +89,24 @@ font_renderer* font_renderer_new(iso_app* app, u32 max_quad_cnt, kode_font_def f
 	ren->ibo_size       = max_quad_cnt * 6 * sizeof(u32);
 
 	ren->buffer = iso_alloc(ren->vbo_size);
+	ren->vertex_cnt = 0;
+
 	init_isolate_buffers(ren);
-	init_font(ren, font_def);
+
+	// Initializing font
+	ren->font = kode_font_new(font_def);
+
+	iso_shader_bind(ren->shader);
+	int samplers[] = { ren->font->atlas->id };
+	iso_uniform_def tex_uni_def = {
+		.name = "tex_atlas",
+		.type = ISO_UNIFORM_SAMPLER2D,
+		.data = &(iso_uniform_sampler_def) {
+			.count = 1,
+			.samplers = samplers
+		}
+	};
+	iso_shader_uniform_set(ren->shader, tex_uni_def); 
 	return ren;
 }
 
@@ -187,53 +117,59 @@ void font_renderer_delete(font_renderer* ren) {
 	iso_render_pipeline_delete(ren->pip);
 	iso_ortho_camera_delete(ren->app->camera_manager, "cam");
 
-	TTF_CloseFont(ren->font->sdl_font);
-	iso_str_delete(ren->font->font_path);
-	delete_glyphs(ren);
-	iso_hmap_delete(ren->font->glyphs);
-	iso_free(ren->font);
-
+	kode_font_delete(ren->font);
 	iso_free(ren->buffer);
 	iso_free(ren);
+}
 
-	TTF_Quit();
+void font_renderer_push_text(
+	font_renderer* ren,
+	const iso_str text,
+	iso_vec2 pos,
+	f32 scale
+) {
+	for (u32 i = 0; i < iso_str_len(text); i++) {
+		char c = iso_str_char_at(text, i);
+		kode_glyph glyph;
+		iso_hmap_get(ren->font->glyphs, c, glyph);
+
+		f32 xpos = pos.x;
+		f32 ypos = pos.y;
+		f32 w = glyph.size.x;
+		f32 h = glyph.size.y;
+
+		f32 tx = glyph.tex_coord.x;
+		f32 ty = glyph.tex_coord.y;
+		f32 tw = glyph.tex_coord.z;
+		f32 th = glyph.tex_coord.w;
+
+		if (ren->vertex_cnt >= ren->max_vertex_cnt) {
+			font_renderer_update(ren);
+		}
+
+		ren->buffer[ren->vertex_cnt++] = (vertex) { 
+			xpos    , ypos    , 0.0f, 1.0f, 1.0f, 1.0f, 1.0f, tx     , ty + th,
+		};
+		ren->buffer[ren->vertex_cnt++] = (vertex) { 
+			xpos + w, ypos    , 0.0f, 1.0f, 1.0f, 1.0f, 1.0f, tx + tw, ty + th,
+		};
+		ren->buffer[ren->vertex_cnt++] = (vertex) { 
+			xpos + w, ypos + h, 0.0f, 1.0f, 1.0f, 1.0f, 1.0f, tx + tw, ty,
+		};
+		ren->buffer[ren->vertex_cnt++] = (vertex) { 
+			xpos    , ypos + h, 0.0f, 1.0f, 1.0f, 1.0f, 1.0f, tx     , ty,
+		};
+		pos.x += w;
+	}	
 }
 
 void font_renderer_update(font_renderer* ren) {
+	u32 quads = ren->vertex_cnt / 4;
+	u32 indices = quads * 6;
+
 	iso_render_pipeline_begin(ren->pip);
 
-	f32 vertices[] = {
-		 50.0f, 50.5f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 0.0f, 0.0f,
-		650.0f, 50.5f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 0.0f, 1.0f,
-		650.0f,250.5f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f,
-		 50.0f,250.5f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 0.0f,
-	};
-
-	iso_buffer_update_def up_def = {
-		.start_sz = 0,
-		.end_sz = sizeof(vertices),
-		.data = vertices
-	};
-	iso_vertex_buffer_update(ren->vbo, up_def);
-
-	char* name = "A";
-
-	kode_glyph glyph;
-	iso_hmap_get(ren->font->glyphs, name, glyph);
-
-	iso_texture_bind(glyph.texture);
-
-	int samplers[] = { glyph.texture->id };
-	iso_uniform_def tex_uni_def = {
-		.name = "char_texture",
-		.type = ISO_UNIFORM_SAMPLER2D,
-		.data = &(iso_uniform_sampler_def) {
-			.count = 1,
-			.samplers = samplers
-		}
-	};
-	iso_shader_uniform_set(ren->shader, tex_uni_def); 
-
+	//TOOD: Camera static, Probably ok to call this startup
 	iso_ortho_camera_update(ren->app->camera_manager, "cam");
 	iso_uniform_def uni_def = {
 		.name = "mvp",
@@ -241,69 +177,17 @@ void font_renderer_update(font_renderer* ren) {
 		.data = &ren->cam->mvp
 	};
 	iso_shader_uniform_set(ren->shader, uni_def);
+	iso_texture_bind(ren->font->atlas);
 
-	iso_render_pipeline_end(ren->pip, 6);
-}
+	iso_buffer_update_def up_def = {
+		.start_sz = 0,
+		.end_sz = ren->vertex_cnt * sizeof(vertex),
+		.data = ren->buffer 
+	};
+	iso_vertex_buffer_update(ren->vbo, up_def);
 
-void font_renderer_render_text(
-	font_renderer* ren,
-	const iso_str text,
-	iso_vec2 pos,
-	f32 scale
-) {
-	for (u32 i = 0; i < iso_str_len(text); i++) {
-		iso_render_pipeline_begin(ren->pip);
-		//TOOD: Camera static, Probably ok to call this startup
-		iso_ortho_camera_update(ren->app->camera_manager, "cam");
-		iso_uniform_def uni_def = {
-			.name = "mvp",
-			.type = ISO_UNIFORM_MAT4,
-			.data = &ren->cam->mvp
-		};
-		iso_shader_uniform_set(ren->shader, uni_def);
+	iso_render_pipeline_end(ren->pip, indices);
 
-		char c = iso_str_char_at(text, i);
-		char name[2] = " \0";
-		name[0] = c;
-
-		kode_glyph glyph;
-		iso_hmap_get(ren->font->glyphs, name, glyph);
-
-		iso_texture_bind(glyph.texture);
-
-		int samplers[] = { glyph.texture->id };
-	
-		iso_uniform_def tex_uni_def = {
-			.name = "char_texture",
-			.type = ISO_UNIFORM_SAMPLER2D,
-			.data = &(iso_uniform_sampler_def) {
-				.count = 1,
-				.samplers = samplers
-			}
-		};
-		iso_shader_uniform_set(ren->shader, tex_uni_def); 
-
-		f32 xpos = pos.x;
-		f32 ypos = pos.y;
-		f32 w = glyph.size.x * scale;
-		f32 h = glyph.size.y * scale;
-
-		f32 vertices[] = {
-			xpos    , ypos    , 0.0f, 1.0f, 1.0f, 1.0f, 1.0f, 0.0f, 1.0f,
-			xpos + w, ypos    , 0.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f,
-			xpos + w, ypos + h, 0.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 0.0f,
-			xpos    , ypos + h, 0.0f, 1.0f, 1.0f, 1.0f, 1.0f, 0.0f, 0.0f,
-		};
-
-		iso_buffer_update_def up_def = {
-			.start_sz = 0,
-			.end_sz = sizeof(vertices),
-			.data = vertices
-		};
-		iso_vertex_buffer_update(ren->vbo, up_def);
-
-		iso_render_pipeline_end(ren->pip, 6);
-
-		pos.x += w;
-	}	
+	memset(ren->buffer, 0, ren->vbo_size);
+	ren->vertex_cnt = 0;
 }
